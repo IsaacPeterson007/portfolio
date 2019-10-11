@@ -9,7 +9,7 @@ export default class NavItem extends Component {
             <div style={this.navItemContainer()}>
                 <div onClick={() => this.props.clicked(this.props.index)}>
                     <NavLink to={this.props.to} style={this.props.active ? this.navItemStyleActive() : this.navItemStyle()}>{this.props.text}</NavLink>
-                    <div style={this.props.active ? this.block() : null}></div>
+                    {/* <div style={this.props.active ? this.block() : null}></div> */}
                 </div>
             </div>
         )
@@ -27,7 +27,8 @@ export default class NavItem extends Component {
         return {
             color: '#000',
             textDecoration: 'none',
-            fontWeight: 'normal',
+            fontWeight: 'bold',
+            textDecoration: 'underline',
         }
     }
 
@@ -41,7 +42,7 @@ export default class NavItem extends Component {
 
     block = () => {
         return {
-            width: '18%',
+            width: '33vh',
             height: '5px',
             backgroundColor: 'black',
             margin: 'auto', 
