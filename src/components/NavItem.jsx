@@ -7,8 +7,8 @@ export default class NavItem extends Component {
 
         return (
             <div style={this.navItemContainer()}>
-                <div onClick={() => this.props.clicked(this.props.index)}>
-                    <NavLink to={this.props.to} style={this.props.active ? this.navItemStyleActive() : this.navItemStyle()}>{this.props.text}</NavLink>
+                <div>
+                    <NavLink onClick={() => this.props.clicked(this.props.index)} to={this.props.to} style={this.props.active ? this.navItemStyleActive() : this.navItemStyle()}>{this.props.text}</NavLink>
                     {/* <div style={this.props.active ? this.block() : null}></div> */}
                 </div>
             </div>
@@ -16,6 +16,12 @@ export default class NavItem extends Component {
     }
 
      //STYLES
+     noClick(){
+         return{
+             'pointer-events': 'none',
+         }
+     }
+
      navItemContainer = () => {
         return {
             width: '100vh',
@@ -26,7 +32,6 @@ export default class NavItem extends Component {
     navItemStyleActive = () => {
         return {
             color: '#000',
-            textDecoration: 'none',
             fontWeight: 'bold',
             textDecoration: 'underline',
         }

@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route} from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import Home from "./components/Pages/Home";
@@ -12,6 +12,7 @@ function App() {
     <HashRouter basename="/">
       <div>
         <NavBar />
+        <h2 style={{paddingLeft: '50px', margin: '0px', fontSize: '60px'}}>Isaac Peterson</h2>
         <Route exact path="/" component={Home} />
         <Route exact path="/projects" component={Projects} />
         <Route path="/resume" component={Resume} />
@@ -20,5 +21,7 @@ function App() {
     </HashRouter>
   );
 }
+
+
 
 export default App;

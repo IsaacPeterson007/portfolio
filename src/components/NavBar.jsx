@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import NavItem from './NavItem'
+import { withRouter } from "react-router";
 
-export default class NavBar extends Component {
+class NavBar extends Component {
 
     constructor(props) {
         super(props);
@@ -12,10 +13,16 @@ export default class NavBar extends Component {
                 {text: "Resume", to: "/resume"},
                 {text: "Contact", to: "/contact"}
             ],
-            selectedIndex: 0,
+            selectedIndex: null,
         };
         this.clicked = this.clicked.bind(this);
       }
+
+      componentWillMount() {
+        this.setState({selectedIndex: this.state.links.indexOf(l => l.to === this.props.location.pathname)})
+    }
+    
+
 
     //FUNCTIONS
     clicked(e) {
@@ -25,9 +32,11 @@ export default class NavBar extends Component {
     render() {
         return (
             <div style={this.navBarContainer()}>
+                <div style={this.navBarPlaceholded()}></div>
                 {this.state.links.map((link, i) => (
-                    <NavItem index={i} clicked={this.clicked} active={this.state.selectedIndex === i} text={link.text} to={link.to}/>
+                    <NavItem key={i} index={i} clicked={this.clicked} active={this.state.selectedIndex === i} text={link.text} to={link.to}/>
                 ))}
+                <div style={this.navBarPlaceholded()}></div>
             </div>
         )
     }
@@ -40,4 +49,12 @@ export default class NavBar extends Component {
             marginBottom: '1vh',
         }
     };
+
+    navBarPlaceholded = () => {
+        return {
+            width: '100vh',
+        }
+    }
 }
+
+export default withRouter(NavBar);
