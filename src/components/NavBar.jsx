@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import NavItem from './NavItem'
+import React, { Component } from 'react';
+import NavItem from './NavItem';
 import { withRouter } from "react-router";
 
 class NavBar extends Component {
@@ -13,30 +13,25 @@ class NavBar extends Component {
                 {text: "Resume", to: "/resume"},
                 {text: "Contact", to: "/contact"}
             ],
-            selectedIndex: null,
+            selectedIndex: localStorage.getItem('selectedIndex') || 0,
         };
         this.clicked = this.clicked.bind(this);
-      }
-
-      componentWillMount() {
-        this.setState({selectedIndex: this.state.links.indexOf(l => l.to === this.props.location.pathname)})
-    }
-    
-
+    };
 
     //FUNCTIONS
     clicked(e) {
+        localStorage.setItem('selectedIndex', e);
         this.setState({selectedIndex: e})
     }
     
     render() {
         return (
             <div style={this.navBarContainer()}>
-                <div style={this.navBarPlaceholded()}></div>
+                <div style={this.navBarPlaceholder()}></div>
                 {this.state.links.map((link, i) => (
-                    <NavItem key={i} index={i} clicked={this.clicked} active={this.state.selectedIndex === i} text={link.text} to={link.to}/>
+                    <NavItem key={i} index={i} clicked={this.clicked} active={parseInt(this.state.selectedIndex) === parseInt(i)} text={link.text} to={link.to}/>
                 ))}
-                <div style={this.navBarPlaceholded()}></div>
+                <div style={this.navBarPlaceholder()}></div>
             </div>
         )
     }
@@ -50,7 +45,7 @@ class NavBar extends Component {
         }
     };
 
-    navBarPlaceholded = () => {
+    navBarPlaceholder = () => {
         return {
             width: '100vh',
         }
