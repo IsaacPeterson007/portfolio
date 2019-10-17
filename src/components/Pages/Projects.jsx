@@ -7,14 +7,29 @@ export default class Projects extends Component {
         super(props);
         this.state = {
             projects: [
-                {title: "Magic Leap Fire and Smoke Simulation", embedLink: '<iframe width="560" height="315" src="https://www.youtube.com/embed/FAsff4sQhVA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
-                {title: "VR Basketball", embedLink: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Fk8ASZspExE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
-                {title: "Out of Time", embedLink: '<iframe width="560" height="315" src="https://www.youtube.com/embed/etH7VxiP1Ig" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
-                {title: "Zombie Survival Game", embedLink: '<iframe width="560" height="315" src="https://www.youtube.com/embed/5qFOywGbokM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
+                {   
+                    title: "Magic Leap Fire and Smoke Simulation", 
+                    src: 'https://www.youtube.com/embed/FAsff4sQhVA',
+                    description: 'This was one of my favorite projects I worked on as an inter at NextThought. The goal to be able to train firefighters with Mixed Reality on the Magic Leap One. '
+                },
+                {   
+                    title: "VR Basketball", 
+                    src: 'https://www.youtube.com/embed/Fk8ASZspExE',
+                    description: 'this is my description lllllllllllllllooooooooooooooooossssssssssssssssseeeeeeeeeeeeeeeeeerrrrrrrrrrrrrr'
+                },
+                {   
+                    title: "Out of Time", 
+                    src: 'https://www.youtube.com/embed/etH7VxiP1Ig',
+                    description: 'this is my description lllllllllllllllooooooooooooooooossssssssssssssssseeeeeeeeeeeeeeeeeerrrrrrrrrrrrrr'
+                },
+                {
+                    title: "Zombie Survival Game", 
+                    src: 'https://www.youtube.com/embed/5qFOywGbokM', 
+                    description: 'this is my description lllllllllllllllooooooooooooooooossssssssssssssssseeeeeeeeeeeeeeeeeerrrrrrrrrrrrrr'
+                },
             ],
         };
     }
-
 
     render() {
         return (
