@@ -35,10 +35,12 @@ export default class Resume extends Component {
     pdfStyle = () => {
         return {
             width: '85%',
-            height: '750px',
+            height: '90vh',
             margin: 'auto',
+            marginTop: '40px',
             display: 'block',
             border: '0',
+            webkitOverflowScrolling: 'touch',
         }
     }
 }
