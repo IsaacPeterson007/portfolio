@@ -9,7 +9,6 @@ export default class Resume extends Component {
                 <div style={this.pdfStyle()}>
                     <object style={this.pdfStyle()} data={pdf} title="resume">
                         <h2 style={this.errorStyle()}>Sorry, can't render a PDF</h2>
-                        <h3 style={this.downloadStyle()}><a href={pdf} download>Download Instead</a></h3>
                     </object>
                 </div>
                     <h3 style={this.downloadButton()}><a href={pdf} download>Download Here</a></h3>
