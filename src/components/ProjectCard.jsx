@@ -7,7 +7,7 @@ export default class ProjectCard extends Component {
             <div className="card">
                 <h1 className="title" >{this.props.project.title}</h1>
                 <div>
-                    <iframe className="video" src={this.props.project.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                    <iframe className="video" title="video" src={this.props.project.src} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
                 </div>
                 <p className="description">{this.props.project.description}</p>
             </div>
