@@ -5,7 +5,7 @@
   font-size: 60px;
 }
 
-.container {
+.contactContainer {
   display: flex;
   flex-direction: row;
 }
@@ -79,9 +79,8 @@ input[type="submit"]:hover {
   background-color: #303030;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-  .container {
+  .contactContainer {
     flex-direction: column;
   }
 }

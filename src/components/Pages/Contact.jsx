@@ -7,7 +7,7 @@ export default class Contact extends Component {
         return (
             <div>
                 <h1 className="contact">Contact Me</h1>
-                <div className="container">
+                <div className="contactContainer">
                     <div className="block">
                         <img alt="my profile image, your not missing much..." src={profile} className="image"></img>
                         <p className="name">Isaac Peterson</p>

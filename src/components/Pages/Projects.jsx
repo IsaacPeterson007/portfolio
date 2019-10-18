@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import Card from '../ProjectCard';
+import Fade from 'react-reveal/Fade';
+import '../../styles/projects.css';
+import next from '../../resources/next.png';
+import prev from '../../resources/prev.png';
 
 export default class Projects extends Component {
 
@@ -28,15 +32,29 @@ export default class Projects extends Component {
                     description: 'this is my description lllllllllllllllooooooooooooooooossssssssssssssssseeeeeeeeeeeeeeeeeerrrrrrrrrrrrrr'
                 },
             ],
+            cardIndex: localStorage.getItem('cardIndex') || 0, 
         };
     }
 
     render() {
         return (
-            <div>
-                {this.state.projects.map((p, i) => (
-                    <Card key={i} project={p} />
-                ))}
+            <div className="projectContainer">
+                <div className="cardContainer">
+                    <Fade right>
+                        <Card project={this.state.projects[this.state.cardIndex]} />
+                    </Fade>
+                </div>
+                <div className="arrow-1">
+                    <input className="arrowImage" type="image" alt="previous project" src={prev} />
+                </div>
+                <div className="arrow-2">
+                    <input className="arrowImage" type="image" alt="next project" src={next} />
+                </div>
+                <div className="pageIndicatorContainer">
+                    {this.state.projects.map((p, i) => (
+                        <span className={parseInt(i) === parseInt(this.state.cardIndex) ? "pageIndicatorActive" : "pageIndicator"}></span>
+                    ))}
+                </div>
             </div>
         )
     }

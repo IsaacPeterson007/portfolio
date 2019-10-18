@@ -51,7 +51,7 @@ class NavBar extends Component {
     navBarContainer = () => {
         return {
             display: 'flex',
-            marginTop: '1vh',
+            marginTop: '2vh',
             marginBottom: '1vh',
         }
     };

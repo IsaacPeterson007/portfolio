@@ -1,0 +1,80 @@
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardContainer {
+  justify-content: center;
+  display: flex;
+}
+
+.arrowImage{
+    width: 50px;
+    padding: 50px;
+    margin: auto;
+}
+
+.arrow-1{
+    display: flex;
+}
+
+.arrow-2{
+    display: flex;
+}
+
+.pageIndicatorContainer {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.pageIndicator {
+  height: 18px;
+  width: 18px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+}
+
+.pageIndicatorActive {
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+}
+
+@media screen and (min-width: 1250px) {
+  .arrow-1 {
+    order: 1;
+  }
+  .cardContainer {
+    order: 2;
+  }
+  .arrow-2 {
+    order: 3;
+  }
+  .pageIndicatorContainer {
+    order: 4;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .cardContainer {
+    order: 1;
+    width: 100%;
+  }
+  .arrow-1 {
+    order: 2;
+  }
+  .pageIndicatorContainer {
+    order: 3;
+  }
+  .arrow-2 {
+    order: 4;
+  }
+}

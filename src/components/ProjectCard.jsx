@@ -1,23 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../styles/projectCard.css';
 
 export default class ProjectCard extends Component {
     render() {
         return (
-            <div  style={this.projectTitle()}>
-                <h1>{this.props.project.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: this.props.project.embedLink }}/>
-                <p>{this.props.project.description}</p>
+            <div className="card">
+                <h1 className="title" >{this.props.project.title}</h1>
+                <div>
+                    <iframe className="video" src={this.props.project.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                </div>
+                <p className="description">{this.props.project.description}</p>
             </div>
         )
-    }
-
-    //STYLES
-    projectTitle = () => {
-        return{
-            margin: 'auto',
-            textAlign: 'center',
-            marginTop: '40px',
-        }
     }
 }
 
