@@ -15,5 +15,5 @@ export default class ProjectCard extends Component {
     }
 }
 
-//src: '<iframe width="560" height="315" src="https://www.youtube.com/embed/5qFOywGbokM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', 
+//src: '<iframe width="560" height="315" src="https://www.youtube.com/embed/5qFOywGbokM" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', 
 

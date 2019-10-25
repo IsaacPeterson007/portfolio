@@ -14,27 +14,27 @@ export default class Projects extends Component {
                 {   
                     title: "Magic Leap Fire and Smoke Simulation", 
                     src: 'https://www.youtube.com/embed/FAsff4sQhVA',
-                    description: 'this is my description'
-                },
-                {   
-                    title: "VR Basketball", 
-                    src: 'https://www.youtube.com/embed/Fk8ASZspExE',
-                    description: 'this is my description'
+                    description: "As an Intern at NextThought, this was my favorite project to research and develop. The goal was to train firefighters for limited visibility scenarios with Magic Leap One's mixed reality headset. Using Unity, I created a smoke-like particle system that interacts with the 3D mesh of the real world created by Magic Leap's sensors. Using the controller, users can place fire down in the environment which produces smoke that will eventually fill the room and block their vision."
                 },
                 {   
                     title: "Out of Time", 
                     src: 'https://www.youtube.com/embed/etH7VxiP1Ig',
-                    description: 'this is my description'
-                },
-                {
-                    title: "Martian Bandits Game", 
-                    src: 'https://www.youtube.com/embed/IWa59Fz5BPU', 
-                    description: 'this is my description'
+                    description: "During my Team Game Production course at Oklahoma Christian, I worked with 4 artists to create a vertical slice of this game. I programmed the game and created the scenes with assets produced by the artists. Using the provided character model, I used Mixamo to rig and animate the character. With Unity's blend tree I created fluid transitions between animations for the player character and NPCs."
                 },
                 {
                     title: "Zombie Survival Game", 
                     src: 'https://www.youtube.com/embed/5qFOywGbokM', 
-                    description: 'this is my description'
+                    description: "My friend and fellow game programmer Adam Libby built a VR gun range for a class project. Using his gun mechanics, we decided to make a VR zombie survival game. I worked on the zombie animations and AI while Adam continued to refine the gun mechanics. Out of all the games I've worked on, this has been my favorite because of how fun and frightening the gameplay turned out to be. We used Unity for this project and built out to the Oculus Rift."
+                },
+                {   
+                    title: "VR Basketball", 
+                    src: 'https://www.youtube.com/embed/Fk8ASZspExE',
+                    description: "Working with a small team of artists, our objective was to create a VR basketball game in the OKC Thunder's Chesapeake Energy Arena. Using blueprints in Unreal Engine 4 I created the gameplay mechanics for a half court shot contest as seen during halftime at many basketball games. The biggest challenge was getting the ball to realistically interact with the environment. "
+                },
+                {
+                    title: "Martian Bandits Game", 
+                    src: 'https://www.youtube.com/embed/IWa59Fz5BPU', 
+                    description: "This was my first game I made with a team of artists during my sophomore year at Oklahoma Christian. The game is a stylized western set on Mars where you must defend your fortress against endless swarms of aliens. I learned some very valuable lessons working with a team and making my first shooter game in Unity. "
                 },
             ],
             cardIndex: parseInt(localStorage.getItem('cardIndex')) || 0, 
@@ -90,7 +90,7 @@ export default class Projects extends Component {
         }
 
         return (
-            <Reveal.Fade clear>
+            <Reveal.Fade clear opposite>
                 <div className="projectContainer">
                     <div className="cardContainer">
                         <Card project={this.state.projects[this.state.cardIndex]} />

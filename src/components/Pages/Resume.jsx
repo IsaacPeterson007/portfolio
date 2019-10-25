@@ -5,7 +5,7 @@ import * as Reveal from 'react-reveal';
 export default class Resume extends Component {
     render() {
         return (
-            <Reveal.Fade clear>
+            <Reveal.Fade clear opposite>
                 <div style={this.pdfStyle()}>
                     <object style={this.pdfStyle()} data={pdf} title="resume">
                         <h2 style={this.errorStyle()}>Sorry, can't render a PDF</h2>

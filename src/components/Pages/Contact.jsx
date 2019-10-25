@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import profile from '../../resources/Profile.jpg';
 import '../../styles/contact.css'
 import * as Reveal from 'react-reveal';
+import linkedinImage from '../../resources/LinkedIn-Logos/LI-In-Bug.png';
 
 export default class Contact extends Component {
     render() {
         return (
-            <Reveal.Fade clear>
+            <Reveal.Fade clear opposite>
                 <div>
                     <h1 className="contact">Contact Me</h1>
                     <div className="contactContainer">
@@ -15,6 +16,7 @@ export default class Contact extends Component {
                             <p className="name">Isaac Peterson</p>
                             <p className="email">brud.icp@gmail.com</p>
                             <p className="number">253.205.1645</p>
+                            <a href="https://www.linkedin.com/in/isaac-peterson-7967a6131" target="_blank"><img className="linkedin" src={linkedinImage}></img></a>
                         </div>
                         <div className="block">
                             <form className="form" action="https://formspree.io/xeybjobx" method="POST"> 
