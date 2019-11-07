@@ -22,9 +22,9 @@
     margin-top: 0;
 }
 
-.homeTitles {
-    font-size: 30px;
-    margin: 0;
+.homeDescription {
+    font-size: 20px;
+    padding-right: 25px;
 }
 
 .homeProfileContainer {
@@ -33,7 +33,7 @@
 }
 
 .homeProfile {
-    width: 750px;
+    width: 700px;
     opacity: 0.5;
     border-radius: 50%;
     margin: 25px;
@@ -44,6 +44,11 @@
         display: none;
     }
 
+    .homeContainer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .homeWordsContainer {
         justify-content: center;
         text-align: center;
@@ -52,7 +57,7 @@
 
     .homeName {
         font-size: 50px;
-        margin-top: 40px;
+        margin-top: 20px;
     }
     
     .homeDegree {

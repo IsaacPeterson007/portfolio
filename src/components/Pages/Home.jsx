@@ -11,12 +11,18 @@ export default class Home extends Component {
                     <div className="homeWordsContainer">
                         <h1 className="homeName">Isaac Peterson</h1>
                         <h2 className="homeDegree">Computer Science with Gaming and Animation</h2>
-                        <p className="homeTitles">Game Programmer.</p>
+                        {/* <p className="homeTitles">Game Programmer.</p>
                         <p className="homeTitles">Software Engineer.</p>
-                        <p className="homeTitles">Web Developer.</p>
+                        <p className="homeTitles">Web Developer.</p> */}
+                        <p className="homeDescription">
+                             Born and raised in the greater Seattle area, I have always had a passion for games. 
+                             I grew up playing sports, video games, and board games such as Disc Golf, Star Wars Battlefront 2, and X-Wing Miniatures. 
+                             I discovered my passion for game development while attending Oklahoma Christian University and knew it was what I wanted to do. 
+                             I love learning new technologies and developing for virtual, augmented, and mixed reality systems.
+                        </p>
                     </div>
                     <div className="homeProfileContainer">
-                        <img src={BwProfile} className="homeProfile"></img>
+                        <img src={BwProfile} alt="my profile picture" className="homeProfile"></img>
                     </div>
                 </div>
             </Reveal.Fade>

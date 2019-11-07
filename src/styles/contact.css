@@ -1,8 +1,8 @@
 .contact {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   text-align: center;
-  font-size: 60px;
+  font-size: 45px;
 }
 
 .contactContainer {
@@ -24,22 +24,21 @@
 }
 
 .name{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
-    margin: 10px;
+    margin: 3px;
 }
 
 .email{
     font-size: 25px;
     font-weight: 500;
-    margin: 10px;
+    margin: 5px;
 }
 
 .number{
     font-size: 20px;
     font-weight: 500;
-    margin: 10px;
-    margin-bottom: 30px;
+    margin: 5px;
 }
 
 .linkedin {
@@ -89,6 +88,6 @@ input[type="submit"]:hover {
     flex-direction: column;
   }
   .contact{
-    font-size: 45px;
+    font-size: 35px;
   }
 }
