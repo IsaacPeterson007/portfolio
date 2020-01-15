@@ -11,6 +11,11 @@ export default class Projects extends Component {
         super(props);
         this.state = {
             projects: [
+                {
+                    title:"Genesis Trailer",
+                    src:"https://www.youtube.com/embed/CYZknrQGX94",
+                    description:"In Game Programming II, this was our final project made in Unreal Engine 4. The maps came from an asset pack and the Characters and Animations from Mixamo. "
+                },
                 {   
                     title: "Magic Leap Fire and Smoke Simulation", 
                     src: 'https://www.youtube.com/embed/FAsff4sQhVA',
