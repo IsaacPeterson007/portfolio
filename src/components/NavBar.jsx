@@ -19,10 +19,7 @@ class NavBar extends Component {
     };
 
     componentDidMount(){
-        console.log('pathname ' + this.props.location.pathname.toString());
-        console.log('link ' + this.state.links[this.state.selectedIndex].to.toString());
         if(this.props.location.pathname.toString() !== this.state.links[this.state.selectedIndex].to.toString()){
-            console.log('dont match');
             var tempIndex = this.state.links.findIndex(x => x.to.toString() === this.props.location.pathname);
             localStorage.setItem('selectedIndex', tempIndex);
             this.setState({selectedIndex: tempIndex});

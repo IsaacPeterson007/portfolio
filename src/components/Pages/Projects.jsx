@@ -12,9 +12,9 @@ export default class Projects extends Component {
         this.state = {
             projects: [
                 {
-                    title:"Genesis Trailer",
+                    title:"Genesis",
                     src:"https://www.youtube.com/embed/CYZknrQGX94",
-                    description:"In Game Programming II, this was our final project made in Unreal Engine 4. The maps came from an asset pack and the Characters and Animations from Mixamo. "
+                    description:"I worked with two other programmers to make this vertical slice of a game. I focused on the character controller and animations, learning how to blend animations in Unreal Engine 4. The environment and characters were outsourced from asset packs and Mixamo.  "
                 },
                 {   
                     title: "Magic Leap Fire and Smoke Simulation", 
@@ -27,7 +27,7 @@ export default class Projects extends Component {
                     description: "During my Team Game Production course at Oklahoma Christian, I worked with 4 artists to create a vertical slice of this game. I programmed the game and created the scenes with assets produced by the artists. Using the provided character model, I used Mixamo to rig and animate the character. With Unity's blend tree I created fluid transitions between animations for the player character and NPCs."
                 },
                 {
-                    title: "Zombie Survival Game", 
+                    title: "VR Zombie Survival", 
                     src: 'https://www.youtube.com/embed/5qFOywGbokM', 
                     description: "My friend and fellow game programmer Adam Libby built a VR gun range for a class project. Using his gun mechanics, we decided to make a VR zombie survival game. I worked on the zombie animations and AI while Adam continued to refine the gun mechanics. Out of all the games I've worked on, this has been my favorite because of how fun and frightening the gameplay turned out to be. We used Unity for this project and built out to the Oculus Rift."
                 },
@@ -37,13 +37,12 @@ export default class Projects extends Component {
                     description: "Working with a small team of artists, our objective was to create a VR basketball game in the OKC Thunder's Chesapeake Energy Arena. Using blueprints in Unreal Engine 4 I created the gameplay mechanics for a half court shot contest as seen during halftime at many basketball games. The biggest challenge was getting the ball to realistically interact with the environment. "
                 },
                 {
-                    title: "Martian Bandits Game", 
+                    title: "Martian Bandits", 
                     src: 'https://www.youtube.com/embed/IWa59Fz5BPU', 
                     description: "This was my first game I made with a team of artists during my sophomore year at Oklahoma Christian. The game is a stylized western set on Mars where you must defend your fortress against endless swarms of aliens. I learned some very valuable lessons working with a team and making my first shooter game in Unity. "
                 },
             ],
             cardIndex: parseInt(localStorage.getItem('cardIndex')) || 0, 
-            swappedCards: true,
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -67,9 +66,6 @@ export default class Projects extends Component {
     }
 
     next = () => {
-
-        this.setState({swappedCards: false});
-
         var temp;
         if(this.state.cardIndex === this.state.projects.length - 1){
             temp = 0;
@@ -80,8 +76,6 @@ export default class Projects extends Component {
 
         localStorage.setItem('cardIndex', temp);
         this.setState({cardIndex: temp});
-
-        this.setState({swappedCards: true});
     }
 
     getCard(){      
